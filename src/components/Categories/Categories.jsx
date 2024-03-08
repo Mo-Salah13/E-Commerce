@@ -32,7 +32,7 @@ export default function Categories() {
                 <NavLink className="nav-link" to="Baby&Toys"> Baby & Toys</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link" to="Home"> House</NavLink>
+                <NavLink className="nav-link" to="House"> House</NavLink>
             </li>
             <li className="nav-item">
                 <NavLink className="nav-link" to="Books"> Books</NavLink>

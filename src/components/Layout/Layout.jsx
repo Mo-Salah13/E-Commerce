@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect} from 'react';
 // import Style from './Layout.module.css';
 import Navbar from '../Navbar/Navbar';
 import { Outlet } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import { UserContext } from '../../Context/userContext';
-import { Offline, Online } from "react-detect-offline";
+import { Offline } from "react-detect-offline";
 export default function Layout() {
     let { setUserToken } = useContext(UserContext);
     useEffect(() => {

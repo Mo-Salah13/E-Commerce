@@ -33,7 +33,7 @@ let routers = createHashRouter([
         {path:"Women'sFashion",element:''},
         {path:'SuperMarket',element:''},
         {path:'Baby&Toys',element:''},
-        {path:'Home',element:''},
+        {path:'House',element:''},
         {path:'Books',element:''},
         {path:'Beauty&Health',element:''},
         {path:'Mobiles',element:''},
