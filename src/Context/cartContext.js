@@ -20,7 +20,39 @@ export function CartContextProvider({ children }) {
     useEffect(() => {
         cartCounter()
     }, [])
-    return <CartContext.Provider value={{ cart, setCart }}>
+
+    function addToWishList(productId) { // !5as b 2daft el-product to wishList 
+        return axios.post(`https://ecommerce.routemisr.com/api/v1/wishlist`,
+            {
+                productId
+            },
+            {
+                headers: {
+                    token: localStorage.getItem('token')
+                }
+            }
+        ).then((response) => response)
+            .catch((error) => error)
+    }
+
+    function getLoggedUserWishList() { //!5as b 3ard el-wishlist
+        return axios.get(`https://ecommerce.routemisr.com/api/v1/wishlist`, {
+            headers: {
+                token: localStorage.getItem('token')
+            }
+        })
+            .then((response) => response)
+            .catch((error) => error)
+    }
+    function removeWishListItem(productId) {
+        return axios.delete(`https://ecommerce.routemisr.com/api/v1/wishlist/`+ productId , {
+            headers: {
+                token: localStorage.getItem('token')
+            }
+        }).then((response) => response)
+            .catch((error) => error)
+    }
+    return <CartContext.Provider value={{ cart, setCart, addToWishList, getLoggedUserWishList, removeWishListItem }}>
         {children}
     </CartContext.Provider>
 }

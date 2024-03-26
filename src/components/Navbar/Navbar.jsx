@@ -50,6 +50,8 @@ export default function Navbar() {
                             <Link to={'/cart'} className="fa-solid fa-basket-shopping text-black text-decoration-none fa-2x cursor-pointer m-3 p-1 position-relative">
                                 <span className='position-absolute translate-middle bg-main top-0 start-100 w-50 h-50 py-1 ps-2 text-white rounded-1  font-sm'>{cart?.numOfCartItems || 0}</span>
                             </Link>
+                            <Link to={'/wishlist'} className="fas fa-heart text-black text-decoration-none fa-2x cursor-pointer m-3 p-1">
+                            </Link>
                             <i className='fab text-info-emphasis fa-facebook mx-2'></i>
                             <i className='fab text-black fa-x-twitter mx-2'></i>
                             <i className='fab text-success fa-whatsapp mx-2'></i>

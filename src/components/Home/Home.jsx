@@ -1,5 +1,4 @@
 import axios from 'axios';
-import React from 'react';
 import Product from '../Product/Product';
 import sliderImage1 from '../../Assets/images/slider-image-3.jpeg'
 import sliderImage2 from '../../Assets/images/slider-image-2.jpeg'
@@ -10,6 +9,7 @@ import Slider from "react-slick";
 import CategorySlider from '../CategorySlider/CategorySlider';
 import { useQuery } from 'react-query';
 import { Helmet } from 'react-helmet';
+import { CartContext } from '../../Context/cartContext';
 
 
 // import Style from './Home.module.css'

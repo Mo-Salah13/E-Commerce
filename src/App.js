@@ -19,6 +19,7 @@ import CheckOut from './components/CheckOut/CheckOut';
 import AllOrders from './components/AllOrders/AllOrders';
 import { CartContextProvider } from './Context/cartContext';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import WishList from './components/WishList/WishList';
 // import { ReactQueryDevtools } from 'react-query/devtools';
 
 let routers = createHashRouter([
@@ -43,6 +44,7 @@ let routers = createHashRouter([
       { path: 'productDetails/:id', element: <RoutingGuard><ProductDetails /></RoutingGuard> },
       { path: 'checkout/:cartId', element: <RoutingGuard><CheckOut /></RoutingGuard> },
       { path: 'allOrders', element: <RoutingGuard><AllOrders /></RoutingGuard> },
+      { path: 'wishlist', element: <RoutingGuard><WishList /></RoutingGuard> },
       { path: 'register', element: <Register /> },
       { path: 'login', element: <Login /> },
       { path: 'forgetPassword', element: <ForgetPassword /> },

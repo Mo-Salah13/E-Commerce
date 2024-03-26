@@ -16,7 +16,7 @@ export default function Cart() {
     const [cartId, setCartId] = useState()
     let { setCart: setContextCart } = useContext(CartContext)
 
-    async function getMySoldProducts() { //!fun show my selected products to buy//
+    async function getMySoldProducts() { //!func show my selected products to buy//
         setLoading(true)
         try {
             let { data } = await axios.get(`https://ecommerce.routemisr.com/api/v1/cart`, {
@@ -37,10 +37,10 @@ export default function Cart() {
         getMySoldProducts()
     }, [])
     //*------------------------------------------------------------------------------*//
-    function removeProductFromCart(productId) {//!fun remove product from cart//
+    function removeProductFromCart(productId) {//!func remove product from cart//
         const swalWithBootstrapButtons = Swal.mixin({
             customClass: {
-                confirmButton: " btn mx-2 btn-success",
+                confirmButton: " btn mx-2 bg-main text-white",
                 cancelButton: " btn mx-2 btn-danger"
             },
             buttonsStyling: false
@@ -81,7 +81,7 @@ export default function Cart() {
 
     }
     //*------------------------------------------------------------------------------*//
-    async function clearProductFromCart() {//!fun Clear product from cart//
+    async function clearProductFromCart() {//!func Clear product from cart//
         setLoading(true)
         let { data } = await axios.delete(`https://ecommerce.routemisr.com/api/v1/cart/`, {
             headers: {
@@ -93,7 +93,7 @@ export default function Cart() {
         setLoading(false)
     }
     //*------------------------------------------------------------------------------*//
-    function changeProductCount(productId, count) {//!fun update product count in cart//
+    function changeProductCount(productId, count) {//!func update product count in cart//
         clearTimeout(timeOutId)
         setTimeOutId(setTimeout(async () => {
             if (count === 0) {

@@ -39,7 +39,7 @@ export default function CheckOut() {
                 headers: {
                     token: localStorage.getItem('token')
                 }, params: {
-                    url: 'https://mo-salah13.github.io/E-Commerce/#/allOrd'
+                    url: 'http://localhost:3000'
                 }
             })
             // console.log(data);
